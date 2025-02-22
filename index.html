@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomato - Order food online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        background-color: #e23744;
+        color: white;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero input {
+        margin-top: 20px;
+        padding: 10px;
+        width: 80%;
+        max-width: 400px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Features Section */
+    .features {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .features h2 {
+        color: #e23744;
+        margin-bottom: 20px;
+    }
+
+    .feature-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .feature {
+        width: 300px;
+        background-color: #e23744;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #e23744;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        nav ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: #e23744;
+            width: 150px;
+            text-align: right;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .feature {
+            width: 90%;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" alt="">
+        </div>
+        <nav>
+            <span class="menu-toggle">&#9776;</span>
+            <ul>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Add restaurant</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+            </ul>
+        </nav>
+    </header><section class="hero">
+    <h1>Discover the best food & drinks</h1>
+    <input type="text" placeholder="Search for restaurant, cuisine or a dish">
+</section>
+
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-container">
+        <div class="feature">
+            <h3>Fast Delivery</h3>
+            <p>Get your food quickly with our efficient delivery service.</p>
+        </div>
+        <div class="feature">
+            <h3>Variety of Choices</h3>
+            <p>Enjoy a wide range of cuisines from top restaurants.</p>
+        </div>
+        <div class="feature">
+            <h3>Easy Payment</h3>
+            <p>Secure and flexible payment options for your convenience.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2030 | All rights reserved
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+            navList.style.display = navList.style.display === "flex" ? "none" : "flex";
+        });
+    });
+</script>
+
+</body>
+</html>
